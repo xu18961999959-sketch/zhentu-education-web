@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正图教育盐城校区 | 专业考公考编培训 · 科学选岗指导</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a365d;
+            --primary-light: #2c5282;
+            --primary-dark: #0f2340;
+            --accent: #ed8936;
+            --accent-light: #f6ad55;
+            --accent-dark: #dd6b20;
+            --gold: #d69e2e;
+            --success: #38a169;
+            --bg-cream: #faf8f5;
+            --bg-light: #f7fafc;
+            --text-dark: #1a202c;
+            --text-gray: #4a5568;
+            --text-light: #718096;
+            --white: #ffffff;
+            --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+            --shadow-md: 0 4px 20px rgba(0,0,0,0.1);
+            --shadow-lg: 0 10px 40px rgba(0,0,0,0.15);
+            --shadow-accent: 0 8px 30px rgba(237, 137, 54, 0.35);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
+            line-height: 1.7;
+            background: var(--bg-cream);
+            overflow-x: hidden;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 16px;
+            position: relative;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto 50px;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-md);
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            box-shadow: 0 4px 12px rgba(26, 54, 93, 0.3);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-main {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: 2px;
+        }
+
+        .logo-sub {
+            font-size: 0.7rem;
+            color: var(--text-light);
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+            background: var(--bg-light);
+        }
+
+        .nav-cta {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%) !important;
+            color: white !important;
+            padding: 10px 24px !important;
+            box-shadow: var(--shadow-accent);
+        }
+
+        .nav-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(237, 137, 54, 0.4) !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            padding: 100px 0 60px;
+            background: linear-gradient(165deg, var(--bg-cream) 0%, var(--white) 50%, #edf2f7 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 80%;
+            height: 150%;
+            background: radial-gradient(ellipse at center, rgba(26, 54, 93, 0.03) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-30px, 20px) rotate(5deg); }
+        }
+
+        .hero-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            min-height: calc(100vh - 160px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--gold) 0%, #f6e05e 100%);
+            color: var(--primary-dark);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            animation: slideDown 0.8s ease-out;
+            box-shadow: 0 4px 15px rgba(214, 158, 46, 0.3);
+        }
+
+        .hero-badge::before {
+            content: '🏆';
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.3;
+            margin-bottom: 20px;
+            animation: slideUp 0.8s ease-out 0.2s both;
+        }
+
+        .hero-title span {
+            color: var(--accent);
+            position: relative;
+        }
+
+        .hero-title span::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            right: 0;
+            height: 12px;
+            background: rgba(237, 137, 54, 0.2);
+            z-index: -1;
+            border-radius: 2px;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-desc {
+            font-size: 1.15rem;
+            color: var(--text-gray);
+            margin-bottom: 32px;
+            animation: slideUp 0.8s ease-out 0.4s both;
+        }
+
+        .hero-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 40px;
+            animation: slideUp 0.8s ease-out 0.5s both;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+
+        .hero-feature::before {
+            content: '✓';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            background: var(--success);
+            color: white;
+            border-radius: 50%;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            animation: slideUp 0.8s ease-out 0.6s both;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: white;
+            box-shadow: var(--shadow-accent);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(237, 137, 54, 0.45);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .hero-visual {
+            position: relative;
+            animation: fadeIn 1s ease-out 0.5s both;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero-card {
+            background: white;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--gold));
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .stat-number {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-number span {
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        .floating-badge {
+            position: absolute;
+            background: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            box-shadow: var(--shadow-md);
+            font-size: 0.85rem;
+            font-weight: 500;
+            animation: bounce 3s ease-in-out infinite;
+        }
+
+        .floating-badge.badge-1 {
+            top: -20px;
+            right: 30px;
+            color: var(--success);
+        }
+
+        .floating-badge.badge-2 {
+            bottom: 60px;
+            left: -30px;
+            color: var(--primary);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Pain Points Section */
+        .pain-section {
+            padding: 100px 0;
+            background: var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pain-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .pain-section .section-title {
+            color: white;
+        }
+
+        .pain-section .section-subtitle {
+            color: rgba(255,255,255,0.7);
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .pain-card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .pain-card:hover {
+            background: rgba(255,255,255,0.12);
+            transform: translateY(-5px);
+        }
+
+        .pain-icon {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .pain-card h3 {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .pain-card p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--bg-cream);
+            border-radius: 24px;
+            padding: 40px 32px;
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            background: white;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-8px);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 2.2rem;
+            transition: all 0.4s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(-5deg);
+            box-shadow: 0 10px 30px rgba(26, 54, 93, 0.3);
+        }
+
+        .service-card h3 {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 16px;
+        }
+
+        .service-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .service-list {
+            list-style: none;
+            text-align: left;
+        }
+
+        .service-list li {
+            padding: 8px 0;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .service-list li::before {
+            content: '●';
+            color: var(--accent);
+            font-size: 0.6rem;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, var(--bg-light) 0%, var(--white) 100%);
+        }
+
+        .process-timeline {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 60px;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 10%;
+            right: 10%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent), var(--gold), var(--success));
+            border-radius: 2px;
+        }
+
+        .process-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            padding: 0 20px;
+        }
+
+        .process-number {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border: 4px solid var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 0 auto 24px;
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover .process-number {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.1);
+            box-shadow: 0 10px 30px rgba(26, 54, 93, 0.3);
+        }
+
+        .process-step h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .process-step p {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+
+        /* Teachers Section */
+        .teachers-section {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .teachers-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .teacher-card {
+            background: var(--bg-cream);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .teacher-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .teacher-avatar {
+            width: 100%;
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: rgba(255,255,255,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .teacher-avatar::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60%;
+            background: linear-gradient(to top, var(--primary), transparent);
+        }
+
+        .teacher-avatar-icon {
+            position: relative;
+            z-index: 1;
+            font-size: 5rem;
+        }
+
+        .teacher-info {
+            padding: 24px;
+            text-align: center;
+        }
+
+        .teacher-name {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 6px;
+        }
+
+        .teacher-title {
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .teacher-desc {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--bg-cream) 0%, #fef6e4 100%);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 24px;
+            padding: 36px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-family: 'Noto Serif SC', serif;
+            font-size: 6rem;
+            color: var(--accent);
+            opacity: 0.15;
+            line-height: 1;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .testimonial-content {
+            font-size: 1rem;
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .author-avatar {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .author-info p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        .result-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--success) 0%, #48bb78 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 50%, var(--primary-light) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -30%;
+            width: 80%;
+            height: 200%;
+            background: radial-gradient(ellipse at center, rgba(237, 137, 54, 0.15) 0%, transparent 60%);
+        }
+
+        .cta-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+            font-weight: 700;
+            color: white;
+            margin-bottom: 16px;
+        }
+
+        .cta-desc {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-form {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cta-input {
+            flex: 1;
+            min-width: 200px;
+            padding: 18px 24px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            background: white;
+            color: var(--text-dark);
+        }
+
+        .cta-input::placeholder {
+            color: var(--text-light);
+        }
+
+        .cta-btn {
+            padding: 18px 40px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-accent);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(237, 137, 54, 0.5);
+        }
+
+        .cta-features {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .cta-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
+        }
+
+        .cta-feature::before {
+            content: '✓';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            background: var(--gold);
+            color: var(--primary-dark);
+            border-radius: 50%;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: rgba(255,255,255,0.7);
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--gold) 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Noto Serif SC', serif;
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: white;
+        }
+
+        .footer-name {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .footer-desc {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .footer-contact p {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .footer-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-inner {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-features {
+                justify-content: center;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .hero-visual {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .teachers-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process-timeline {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .process-timeline::before {
+                top: 0;
+                bottom: 0;
+                left: 40px;
+                right: auto;
+                width: 4px;
+                height: auto;
+            }
+
+            .process-step {
+                text-align: left;
+                padding-left: 100px;
+            }
+
+            .process-number {
+                position: absolute;
+                left: 0;
+                margin: 0;
+            }
+
+            .teachers-grid {
+                grid-template-columns: 1fr;
+                max-width: 320px;
+                margin: 0 auto;
+            }
+
+            .cta-features {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animations on scroll */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <div class="logo-icon">正</div>
+                <div class="logo-text">
+                    <span class="logo-main">正图教育</span>
+                    <span class="logo-sub">盐城校区 · 科学上岸</span>
+                </div>
+            </a>
+            <nav>
+                <a href="#services">课程服务</a>
+                <a href="#process">学习流程</a>
+                <a href="#teachers">名师团队</a>
+                <a href="#testimonials">学员案例</a>
+                <a href="#contact" class="nav-cta">免费咨询</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge">盐城地区公考培训领导品牌</div>
+                <h1 class="hero-title">
+                    家长不懂选岗？<br>
+                    我们帮您<span>精准定位</span>
+                </h1>
+                <p class="hero-desc">
+                    正图教育深耕公考培训12年，独创"岗位匹配+系统备考"双轮驱动模式，
+                    让每一位考生都能找到最适合自己的上岸之路。
+                </p>
+                <div class="hero-features">
+                    <div class="hero-feature">1对1岗位分析</div>
+                    <div class="hero-feature">历年大数据支撑</div>
+                    <div class="hero-feature">全程跟踪服务</div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">立即预约选岗咨询</a>
+                    <a href="#services" class="btn btn-secondary">了解课程详情</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="floating-badge badge-1">✨ 今日已有32人预约</div>
+                    <div class="floating-badge badge-2">📈 上岸率持续领先</div>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number">12<span>年</span></div>
+                            <div class="stat-label">深耕公考培训</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">89.6<span>%</span></div>
+                            <div class="stat-label">综合上岸率</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">15000<span>+</span></div>
+                            <div class="stat-label">成功上岸学员</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">200<span>+</span></div>
+                            <div class="stat-label">岗位数据库</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="pain-section">
+        <div class="container">
+            <h2 class="section-title">选岗难题，我们懂您</h2>
+            <p class="section-subtitle">作为家长，面对孩子的公考之路，这些困惑是否也困扰着您？</p>
+            <div class="pain-grid">
+                <div class="pain-card fade-in">
+                    <div class="pain-icon">😰</div>
+                    <h3>岗位太多，无从下手</h3>
+                    <p>国考、省考、事业编、选调生……数千个岗位让人眼花缭乱，不知道哪个适合孩子。</p>
+                </div>
+                <div class="pain-card fade-in">
+                    <div class="pain-icon">📊</div>
+                    <h3>数据复杂，难以分析</h3>
+                    <p>历年分数线、竞争比、录取率……海量数据看不懂，更无法做出科学判断。</p>
+                </div>
+                <div class="pain-card fade-in">
+                    <div class="pain-icon">🎯</div>
+                    <h3>条件限制，错失良机</h3>
+                    <p>专业、学历、户籍、工作年限……各种限制条件搞不清，容易选错或错过好岗位。</p>
+                </div>
+                <div class="pain-card fade-in">
+                    <div class="pain-icon">⏰</div>
+                    <h3>时间紧迫，决策困难</h3>
+                    <p>报名窗口期只有几天，信息获取慢、分析不到位，往往匆忙做出错误选择。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <h2 class="section-title">六大王牌服务</h2>
+            <p class="section-subtitle">正图教育盐城校区为您提供从选岗到上岸的全流程一站式服务</p>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">🎯</div>
+                    <h3>智能选岗系统</h3>
+                    <p>大数据+AI分析，科学匹配最优岗位</p>
+                    <ul class="service-list">
+                        <li>个人条件精准画像</li>
+                        <li>200+岗位智能匹配</li>
+                        <li>竞争压力动态评估</li>
+                        <li>上岸概率预测分析</li>
+                    </ul>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">📚</div>
+                    <h3>系统精讲课程</h3>
+                    <p>名师授课，夯实基础稳步提升</p>
+                    <ul class="service-list">
+                        <li>行测五大模块精讲</li>
+                        <li>申论写作技巧特训</li>
+                        <li>面试礼仪实战演练</li>
+                        <li>时政热点专题解读</li>
+                    </ul>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">✍️</div>
+                    <h3>刷题强化训练</h3>
+                    <p>海量真题+模拟演练，熟能生巧</p>
+                    <ul class="service-list">
+                        <li>10000+真题精选库</li>
+                        <li>智能错题本分析</li>
+                        <li>薄弱环节针对突破</li>
+                        <li>每周模拟考试检测</li>
+                    </ul>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">👥</div>
+                    <h3>1对1专属辅导</h3>
+                    <p>私人定制学习方案，因材施教</p>
+                    <ul class="service-list">
+                        <li>学情诊断个性定制</li>
+                        <li>专属学习计划制定</li>
+                        <li>全程督学答疑解惑</li>
+                        <li>心理疏导压力调节</li>
+                    </ul>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🎤</div>
+                    <h3>面试冲刺特训</h3>
+                    <p>真实模拟，助您自信从容应对</p>
+                    <ul class="service-list">
+                        <li>结构化面试全攻略</li>
+                        <li>无领导小组讨论训练</li>
+                        <li>考官视角逆向思维</li>
+                        <li>10+轮模拟实战演练</li>
+                    </ul>
+                </div>
+                <div class="service-card fade-in">
+                    <div class="service-icon">🏆</div>
+                    <h3>VIP协议班</h3>
+                    <p>不过退费，让您无后顾之忧</p>
+                    <ul class="service-list">
+                        <li>笔试+面试全程培优</li>
+                        <li>无限次课程循环听</li>
+                        <li>独家内部押题资料</li>
+                        <li>不过全额/按比退费</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section" id="process">
+        <div class="container">
+            <h2 class="section-title">科学备考五步法</h2>
+            <p class="section-subtitle">从迷茫到上岸，正图教育陪您走好每一步</p>
+            <div class="process-timeline">
+                <div class="process-step fade-in">
+                    <div class="process-number">1</div>
+                    <h4>免费测评</h4>
+                    <p>全面诊断基础水平<br>明确优势与短板</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="process-number">2</div>
+                    <h4>精准选岗</h4>
+                    <p>大数据智能匹配<br>锁定最优目标岗位</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="process-number">3</div>
+                    <h4>定制计划</h4>
+                    <p>个性化学习方案<br>高效备考不走弯路</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="process-number">4</div>
+                    <h4>系统培训</h4>
+                    <p>名师精讲+刷题强化<br>稳步提升硬实力</p>
+                </div>
+                <div class="process-step fade-in">
+                    <div class="process-number">5</div>
+                    <h4>成功上岸</h4>
+                    <p>笔试面试双通关<br>圆梦公职人生</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teachers Section -->
+    <section class="teachers-section" id="teachers">
+        <div class="container">
+            <h2 class="section-title">名师天团</h2>
+            <p class="section-subtitle">汇聚业内顶尖师资，平均授课经验8年以上</p>
+            <div class="teachers-grid">
+                <div class="teacher-card fade-in">
+                    <div class="teacher-avatar">
+                        <span class="teacher-avatar-icon">👨‍🏫</span>
+                    </div>
+                    <div class="teacher-info">
+                        <h4 class="teacher-name">张明远</h4>
+                        <p class="teacher-title">行测研究院院长</p>
+                        <p class="teacher-desc">15年公考培训经验，独创"秒杀技巧"体系，学员平均提分20+</p>
+                    </div>
+                </div>
+                <div class="teacher-card fade-in">
+                    <div class="teacher-avatar">
+                        <span class="teacher-avatar-icon">👩‍🏫</span>
+                    </div>
+                    <div class="teacher-info">
+                        <h4 class="teacher-name">李雅婷</h4>
+                        <p class="teacher-title">申论首席讲师</p>
+                        <p class="teacher-desc">原省委机关工作经历，深谙申论阅卷标准，押题命中率超85%</p>
+                    </div>
+                </div>
+                <div class="teacher-card fade-in">
+                    <div class="teacher-avatar">
+                        <span class="teacher-avatar-icon">👨‍💼</span>
+                    </div>
+                    <div class="teacher-info">
+                        <h4 class="teacher-name">王建国</h4>
+                        <p class="teacher-title">面试金牌教练</p>
+                        <p class="teacher-desc">原组织部面试考官，培养面试逆袭学员500+，翻盘率高达70%</p>
+                    </div>
+                </div>
+                <div class="teacher-card fade-in">
+                    <div class="teacher-avatar">
+                        <span class="teacher-avatar-icon">👩‍💻</span>
+                    </div>
+                    <div class="teacher-info">
+                        <h4 class="teacher-name">陈思琪</h4>
+                        <p class="teacher-title">选岗规划专家</p>
+                        <p class="teacher-desc">10年岗位研究经验，精通各类公考政策，成功规划学员3000+</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">上岸学员说</h2>
+            <p class="section-subtitle">每一个成功上岸的故事，都是对我们最好的认可</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-content">
+                        "作为家长，我完全不懂公考，孩子报什么岗位全靠蒙。来正图后，陈老师根据孩子的专业和意向，分析了十几个岗位的竞争情况，最后选了一个竞争比最低的，没想到一次就上岸了！"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">刘</div>
+                        <div class="author-info">
+                            <h4>刘妈妈<span class="result-badge">孩子已上岸</span></h4>
+                            <p>盐城市税务局 · 2024国考</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-content">
+                        "我是二战考生，第一年自己瞎报，岗位竞争300:1直接没戏。在正图学习后，不仅系统提升了能力，选岗老师还帮我找到了一个只有28人报名的岗位，成功逆袭！"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">周</div>
+                        <div class="author-info">
+                            <h4>周同学<span class="result-badge">笔试第一</span></h4>
+                            <p>大丰区检察院 · 2024省考</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in">
+                    <p class="testimonial-content">
+                        "VIP协议班真的很值！老师们全程跟踪，从选岗到笔试到面试，每个环节都有人指导。尤其是面试特训，让我从一个紧张到说不出话的小白，变成了面试第一名！"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">张</div>
+                        <div class="author-info">
+                            <h4>张同学<span class="result-badge">面试逆袭</span></h4>
+                            <p>射阳县人社局 · 2024省考</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="container cta-content">
+            <h2 class="cta-title">您的孩子值得更好的未来</h2>
+            <p class="cta-desc">立即预约免费选岗咨询，让专业老师为您的孩子量身定制上岸方案</p>
+            <form class="cta-form" onsubmit="handleSubmit(event)">
+                <input type="text" class="cta-input" placeholder="请输入您的姓名" required>
+                <input type="tel" class="cta-input" placeholder="请输入您的手机号" required>
+                <button type="submit" class="cta-btn">立即预约 →</button>
+            </form>
+            <div class="cta-features">
+                <div class="cta-feature">免费选岗分析报告</div>
+                <div class="cta-feature">1对1专家咨询</div>
+                <div class="cta-feature">赠送备考资料大礼包</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-brand">
+                        <div class="footer-logo">正</div>
+                        <span class="footer-name">正图教育盐城校区</span>
+                    </div>
+                    <p class="footer-desc">
+                        正图教育创立于2012年，专注公务员、事业单位、教师编制等公职类考试培训。
+                        盐城校区秉承"用心服务、科学备考"的理念，已帮助15000+学员成功上岸。
+                    </p>
+                    <div class="footer-contact">
+                        <p>📍 盐城市亭湖区人民中路88号正图教育大厦</p>
+                        <p>📞 0515-8888-8888 / 199-xxxx-xxxx</p>
+                        <p>🕐 营业时间：周一至周日 8:30-21:00</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-title">课程服务</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">国考笔试培训</a></li>
+                        <li><a href="#">省考笔试培训</a></li>
+                        <li><a href="#">事业编考试培训</a></li>
+                        <li><a href="#">教师编考试培训</a></li>
+                        <li><a href="#">面试特训班</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">选岗服务</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">智能选岗系统</a></li>
+                        <li><a href="#">1对1选岗咨询</a></li>
+                        <li><a href="#">岗位竞争分析</a></li>
+                        <li><a href="#">历年数据查询</a></li>
+                        <li><a href="#">政策解读</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">关于我们</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">品牌介绍</a></li>
+                        <li><a href="#">师资团队</a></li>
+                        <li><a href="#">学员案例</a></li>
+                        <li><a href="#">校区环境</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 正图教育盐城校区 版权所有 | 苏ICP备xxxxxxxx号-1</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form submission
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('感谢您的预约！我们的课程顾问将在24小时内与您联系。');
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
